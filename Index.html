@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Violaciones a las medidas del covid-19</title>
+    <script src="main.js"></script>
+    <h2 align ="center">Reportes de las violaciones de las medidas del covid-19</h2>
+    <br>
+    <link rel="stylesheet" href="Estilos.css">
+    
+</head>
+<body onload="cargarDatos();">
+ 
+    <input 
+    class="idxEdit" 
+    hidden 
+    readonly 
+    aria-readonly="true"
+     />
+
+    <table border="0" >
+
+        <tr>
+            <th class="title">Lugar:</th>
+            <td>
+                <input id="txtLugar" class="w3-input w3-animate-input" type="text" style="width:155px" required>
+            </td>
+        </tr>
+
+        <tr>
+            <th class="title">Latitud:</th>
+            <td>
+                <input id='txtLatitud' class="w3-input w3-animate-input" type="text" style="width:155px" required> 
+            </td>
+        </tr>
+         <tr>
+            <th class="title">Longitud:</th>
+            <td>
+                 <input id='txtLongitud' class="w3-input w3-animate-input" type="text" style="width:155px" required>
+            </td>
+         </tr>
+
+         <tr>
+            <th class="title">Fecha:</th>
+            <td>
+                <input id='txtFecha' class="w3-input w3-animate-input" type="date" style="width:155px" required >
+            </td>
+         </tr>
+
+         <tr>
+            <th class="title">Tipo de violacion:</th>
+            <td>
+                <input id='txtViolacion' class="w3-input w3-animate-input" type="text" style="width:155px" required>
+            </td>
+
+         </tr>
+           
+         <tr>
+
+            <th class="title">Comentario:</th>
+            <td>
+                <input id='txtComentario' class="w3-input w3-animate-input" type="text" style="width:155px" required>
+         </td>
+
+         <tr>
+
+            <th class="title">Correo electronico:</th>
+            <td>
+                <input id='txtCorreo' class="w3-input w3-animate-input" type="text" style="width:155px" required>
+         </td>
+ 
+         </tr>
+           
+
+            <td colspan="2" align="center">
+                <button class="btn btn-outline-secondary" onclick="agregarnuevoreporte ();" type='button' >
+                    <svg class="bi bi-person-plus-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 100-6 3 3 0 000 6zm7.5-3a.5.5 0 01.5.5v2a.5.5 0 01-.5.5h-2a.5.5 0 010-1H13V5.5a.5.5 0 01.5-.5z" clip-rule="evenodd"/>
+                    <path fill-rule="evenodd" d="M13 7.5a.5.5 0 01.5-.5h2a.5.5 0 010 1H14v1.5a.5.5 0 01-1 0v-2z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+                <button class="btn btn-outline-secondary" onclick="limpiarcampos()" id="limpiar">Limpiar</button>
+                <button class="btn btn-outline-danger" onclick="deleteAll()">Borrar todo</button>
+            </td>
+           
+    </table>
+    <hr>
+    <br>
+    <div>
+        <table id='tbldatos' class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Lugar</th>
+                    <th>Latidud</th>
+                    <th>Longitud</th>
+                    <th>Fecha</th>  
+                    <th>Tipo de violacion</th>
+                    <th>Comentatio</th>
+                    <th>Correo electronico</th>
+                </tr>
+            </thead>
+            <tbody id="tbDatos">
+          
+    
+            </tbody>
+    
+        </table>
+        
+    </div>
+</body>
+</html>

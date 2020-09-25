@@ -1,0 +1,24 @@
+#field{
+
+    width: 350px;
+}
+
+#tbldatos{
+    margin: auto;
+    width: 80%;
+}
+
+#tbldatos td {
+    border: solid #cccccc 2px ;
+    
+}
+
+.borrar{
+    color: red;
+    background: pink;
+}
+.title{
+    text-align: right;
+    font-size: 24px;
+}
+
